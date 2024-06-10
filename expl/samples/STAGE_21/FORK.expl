@@ -1,0 +1,24 @@
+int main()
+{
+
+decl
+    int temp, pid, a;
+    string input;
+enddecl
+
+begin
+          
+    a = 0;
+    while (a < 3) do
+    
+        temp = exposcall ("Fork");
+        //ite("aa");
+        //pid = exposcall("Write", -2, temp);
+        a = a+1;
+        
+    endwhile;
+
+    temp = exposcall ("Exec" , "GETPID.xsm");
+    return 0;
+end 
+}

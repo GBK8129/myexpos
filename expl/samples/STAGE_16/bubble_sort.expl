@@ -1,0 +1,47 @@
+decl
+    int a[50];
+enddecl
+int main() {
+
+    decl
+          int i,j, temp, n, x, y;
+    enddecl
+    
+    begin
+          x = exposcall ("Write", -1, "Size:");
+          x = exposcall ( "Read" , -1, n );
+          i=0;
+          while (i<n) do
+                 x = exposcall ("Write", -1, "value:");
+                 y= exposcall ( "Read" , -1, a[i] );
+                 i=i+1;
+          endwhile;
+          
+          i=0; 
+          
+          while(i<(n)) do
+                 j=0;
+                 
+                 while(j<(n-i-1)) do
+                      if(a[j]>a[j+1]) then 
+                    	   temp=a[j];
+                     	   a[j]=a[j+1];
+                     	   a[j+1]=temp;
+                      endif;
+                      j=j+1;
+                 endwhile;
+                 i=i+1;
+          endwhile;
+          
+          i=0;
+          while(i<n) do
+                 y= exposcall ( "Write" , -2, a[i] );
+                 i=i+1;
+          endwhile;
+          
+          return 0;
+     end     
+                
+          
+
+}
